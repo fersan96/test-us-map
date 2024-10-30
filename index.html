@@ -6,8 +6,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <title>Interactive US Presidential Electoral Map 2024</title>
    <meta name="description"
-      content="Interactive US Presidential Electoral Map 2024 by Diana Le. Click each state to assign totals to candidates and watch their progress">
-   <meta name="author" content="Diana Le">
+      content="Click each state to assign totals to candidates and watch their progress">
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="stylesheet" href="styles.css">
    <link rel="icon"
@@ -16,7 +15,7 @@
 
 <body class="theme-bright">
    <!-- <div class="instructions-overlay open"></div> -->
-   <h1>🇺🇸 USA Presidential Election 2024<span></span></h1>
+   <h1 class="title-map">Elecciones presidenciales de EE.UU. 2024<span></span></h1>
    <button class="open-instructions-btn" aria-label="Open Instructions" title="Instructions"><span>?</span></button>
    <div class="hurdle-wrapper">
       <div class="hurdle-names">
@@ -31,7 +30,7 @@
             <div class="bar-gop"></div>
          </div>
       </div>
-      <div class="flag">🏆<br />270 to Win</div>
+      <div class="flag"><br />270 a ganar</div>
    </div> <!-- end hurdle wrapper -->
    <dialog class="instructions-dialog">
       <!-- <button class="close-instructions-btn" aria-label="Close Instructions"><span>x</span></button> -->
@@ -59,10 +58,10 @@
       </form>
    </dialog>
    <dialog class="clear-dialog">
-      <h2>Are you sure you want to reset the map?</h2>
+      <h2>¿Seguro que desea restablecer el mapa?</h2>
       <form method="dialog">
-         <button class="btn-dialog btn-secondary" value="cancel" autofocus>Cancel</button>
-         <button id="clear-confirm-btn" class="btn-dialog" value="default">Confirm</button>
+         <button class="btn-dialog btn-secondary" value="cancel" autofocus>Cancelar</button>
+         <button id="clear-confirm-btn" class="btn-dialog" value="default">Confirmar</button>
       </form>
    </dialog>
    <div class="map-totals">
@@ -457,7 +456,7 @@
                   sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccscc" />
             </a>
          </svg>
-         <div id="doc">
+         <div id="doc" hidden>
             <button class="square-state" data-state="District of Columbia"
                data-candidate="">D.C.</button>
          </div>
@@ -513,17 +512,14 @@
             </div> <!-- end table wrapper GOP -->
          </div> <!-- end tables -->
          <div class="btn-local-wrapper">
-            <button id="save-btn" class="btn-dialog">Save</button>
-            <button id="clear-btn" class="btn-dialog btn-secondary">Reset</button>
+            <button id="save-btn" class="btn-dialog">Guardar</button>
+            <button id="clear-btn" class="btn-dialog btn-secondary">Restablecer</button>
          </div>
          <p class="save-time"></p>
       </div> <!-- end candidates -->
 
    </div> <!-- end map totals -->
-   <footer>
-      View on <a href="https://github.com/pursuitofleisure/usa-electoral-map" target="_blank">Github</a> | Made in
-      the USA by <a href="https://www.dianale.dev/" target="_blank">Diana Le</a>
-   </footer>
+  
    <script src="scripts.js" async defer></script>
 </body>
 

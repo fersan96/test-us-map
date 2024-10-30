@@ -118,11 +118,11 @@ const clearDialog = document.querySelector('.clear-dialog');
 const clearConfirmBtn = document.querySelector('#clear-confirm-btn');
 if (localStorage.getItem('saveTime')) {
    const saveTime = localStorage.getItem('saveTime');
-   savedTime.innerHTML = `Last saved:  ${saveTime}`;
+   savedTime.innerHTML = `Ultima actualización:  ${saveTime}`;
 }
 
 /* Events on page load */
-instructionsDialog.showModal();
+// instructionsDialog.showModal();
 
 /*
 - On page load, loop through each array
@@ -216,7 +216,7 @@ function updateVoteTotals() {
 
    // Update the HTML with the states and percentage to 270
    // The percentage bar needs to take into account the border and the percentage change once they pass 270
-   gop.textContent = `${gopTotal} Votes`;
+   gop.textContent = `${gopTotal} Votos`;
    if (gopTotal <= 270) {
       gopPercentage.style.width = `calc(${gopTotal / 270 * 100}% + 4px)`;
    } else {
@@ -234,7 +234,7 @@ function updateVoteTotals() {
 
    // Update the HTML with the states and percentage to 270
    // The percentage bar needs to take into account the border and the percentage change once they pass 270
-   dem.textContent = `${demTotal} Votes`;
+   dem.textContent = `${demTotal} Votos`;
    if (demTotal <= 270) {
       demPercentage.style.width = `calc(${demTotal / 270 * 100}% + 4px)`;
    } else {
@@ -276,13 +276,13 @@ function handleStateInfo(e) {
    e.preventDefault();
    const stateName = e.currentTarget.dataset.state;
    const stateElectorates = electoralValues.find(item => item.state === e.currentTarget.dataset.state).allocation;
-   current.textContent = `${stateName}: ${stateElectorates} votes`;
+   current.textContent = `${stateName}: ${stateElectorates} votos`;
 }
 
 /* Open Instructions */
-function handleOpenbutton() {
-   instructionsDialog.showModal();
-}
+// function handleOpenbutton() {
+//    instructionsDialog.showModal();
+// }
 
 /* Collapse tables showing states for GOP Candidate */
 function handleGopTable(e) {
@@ -342,7 +342,7 @@ squareStates.forEach(state => {
 });
 
 /* Buttons for instructions */
-openBtn.addEventListener('click', handleOpenbutton);
+// openBtn.addEventListener('click', handleOpenbutton);
 
 saveBtn.addEventListener('click', handleSaveStorage);
 clearBtn.addEventListener('click', () => {
@@ -359,7 +359,7 @@ function handleSaveStorage() {
    }
 
    localStorage.setItem('saveTime', new Date().toLocaleString());
-   savedTime.innerHTML = `Last saved: ${new Date().toLocaleString()}`;
+   savedTime.innerHTML = `Ultima actualización: ${new Date().toLocaleString()}`;
 }
 
 clearConfirmBtn.addEventListener('click', ()=> {
