@@ -252,10 +252,11 @@ function updateVoteTotals() {
          h1.textContent = ` - President Electo ${demCandidate}`;
       }
       if (winnerAnnounced === false ) {
-         winner.showModal();
-         // Only show winner pop-up once
-         winnerAnnounced = true;
-         localStorage.setItem('winnerAnnounced', winnerAnnounced);
+
+         // winner.showModal();
+         // // Only show winner pop-up once
+         // winnerAnnounced = true;
+         // localStorage.setItem('winnerAnnounced', winnerAnnounced);
       }
    }
 }
