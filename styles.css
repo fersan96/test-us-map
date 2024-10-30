@@ -379,6 +379,7 @@ h3 {
   flex-direction: column;
   gap: 2px;
   font-weight: 500;
+  font-size: 30px;
 }
 
 .table[aria-expanded="true"] {
@@ -547,6 +548,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 8px;
+  display: none;
 }
 
 .btn-local-wrapper button,
