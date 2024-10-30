@@ -1,61 +1,62 @@
 :root {
-   --blue: #145b9c;
-   --red: #cc2c11;
-   --purple: #351431;
-   --yellow: #DB9D47;
-   --exception: #592252;
-   --pink: #F0A7A0;
-   --white: #F7F7F9;
-   --error: #D67AB1;
-   --text: #351431;
+  --blue: #5c64e6;
+  --red: #ff4d5f;
+  --purple: #351431;
+  --yellow: #db9d47;
+  --exception: #592252;
+  --pink: #f0a7a0;
+  --white: #f7f7f9;
+  --error: #d67ab1;
+  --text: #351431;
 }
 
 .theme-bright {
-   --blue: #390099;
-   --red: #ff0054;
-   --purple: #71677c;
-   --exception: #c04cfd;
-   --pink: #ADA6B5;
-   --white: #fffffc;
-   --error: #efbdeb;
-   --text: #230c0f;
-   --btn: #1b3022;
-   --btn-secondary: #f1faee;
-   --btn-secondary-hover: #437C90;
-   --focus: #92bcea;
+  --blue: #5c64e6;
+  --red: #ff4d5f;
+  --purple: #71677c;
+  --exception: #c04cfd;
+  --pink: #ada6b5;
+  --white: #fffffc;
+  --error: #efbdeb;
+  --text: #230c0f;
+  --btn: #1b3022;
+  --btn-secondary: #f1faee;
+  --btn-secondary-hover: #437c90;
+  --focus: #92bcea;
 }
 
 body {
-   color: var(--text);
-   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-   margin: 16px;
-   font-weight: 400;
-   background-color:  #DDE5FA;
+  color: var(--text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 16px;
+  font-weight: 400;
+  background-color: #dde5fa;
 }
 
 h1 {
-   text-align: center;
-   font-size: 1.5rem;
-   font-weight: 600;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 h2 {
-   margin: 0;
-   font-size: 1.2rem;
-   font-weight: 500;
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 strong {
-   text-transform: uppercase;
-   text-decoration: underline;
+  text-transform: uppercase;
+  text-decoration: underline;
 }
 
 h1 {
-   padding: 0 2em;
+  padding: 0 2em;
 }
 
 button {
-   cursor: pointer;
+  cursor: pointer;
 }
 
 *:focus-visible {
@@ -63,234 +64,240 @@ button {
 }
 
 dialog form {
-   margin-top: 16px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   gap: 8px;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
 @media only screen and (min-width: 600px) {
-   h1 {
-      font-size: 1.8rem;
-   }
-   h2 {
-      font-size: 1.5rem;
-   }
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
-   h1 {
-      font-size: 2rem;
-   }
-   h2 {
-      font-size: 1.5rem;
-   }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
 }
-
 
 /* Instructions */
 
 ::backdrop {
-   background-color: rgba(0,0,0);
-   opacity: 0.8;
- }
+  background-color: rgba(0, 0, 0);
+  opacity: 0.8;
+}
 
 .instructions-dialog,
 .winner-dialog {
-   width: 75%;
-   max-width: 600px;
-   font-weight: 600;
-   background-color: #fff;
-   padding: 16px;
-   border: 4px solid var(--purple);
-   border-radius: 8px;
+  width: 75%;
+  max-width: 600px;
+  font-weight: 600;
+  background-color: #fff;
+  padding: 16px;
+  border: 4px solid var(--purple);
+  border-radius: 8px;
 }
 
 .instructions.open .open-instructions-btn {
-   display: none;
+  display: none;
 }
 
 .instructions h2,
 .instructions h3 {
-   text-align: center;
+  text-align: center;
 }
 
 /* Winner */
 
 .winner-dialog {
-   /* display: none; */
-   text-align: center;
+  /* display: none; */
+  text-align: center;
 }
 
 .winner-dialog h2 {
-   margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 .winner-dialog h3 {
-   margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .current-state {
-   font-style: italic;
-   margin-bottom: 1em;
+  font-style: italic;
+  margin-bottom: 1em;
+  font-size: 50px;
 }
 
 /* Maine and Nebraska input boxes */
 
 .maine,
 .nebraska {
-   height: 0;
-   overflow: hidden;
-   -webkit-transform: height 0.2s ease;
-       -ms-transform: height 0.2s ease;
-           transform: height 0.2s ease;
+  height: 0;
+  overflow: hidden;
+  -webkit-transform: height 0.2s ease;
+  -ms-transform: height 0.2s ease;
+  transform: height 0.2s ease;
 }
 
 .maine.active,
 .nebraska.active {
-   border: 3px solid var(--purple);
-   border-radius: 8px;
-   padding: 1em;
-   margin: 1em 0;
-   height: auto;
+  border: 3px solid var(--purple);
+  border-radius: 8px;
+  padding: 1em;
+  margin: 1em 0;
+  height: auto;
 }
 
 .exception-state h3 {
-   display: -webkit-box;
-   display: -ms-flexbox; 
-   display: flex;
-   -webkit-box-align: center;
-       -ms-flex-align: center;
-           align-items: center;
-   -webkit-box-pack: justify;
-       -ms-flex-pack: justify;
-           justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 h3 {
-   margin-top: 0;
+  margin-top: 0;
 }
 
 /* Progress Bar */
 
 .hurdle {
-   width: 100%;
-   height: 20px;
-   display: -ms-grid;
-   display: grid;
-   -ms-grid-columns: 1fr 1fr;
-   grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 100px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .hurdle-names {
-   margin-bottom: 2px;
-   display: flex;
-   justify-content: space-between;
-   text-transform: uppercase;
-   font-size: 0.75rem;
-   font-weight: 700;
+  margin-bottom: 2px;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-size: 50px;
+  font-weight: 700;
+  max-width: 1600px;
+  margin: 0 auto;
+  margin-bottom: 30px;
 }
 
 .hurdle-dem {
-   position: relative;
-   border: 2px solid var(--blue);
-   border-radius: 8px 0 0 8px;
+  position: relative;
+  border: 2px solid var(--blue);
+  border-radius: 8px 0 0 8px;
 }
 
 .bar-dem {
-   position: absolute;
-   top: 0;
-   left: 0;
-   height: 100%;
-   width: 4px;
-   background-color: var(--blue);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 4px;
+  background-color: var(--blue);
 }
 
 .hurdle-gop {
-   position: relative;
-   border: 2px solid var(--red);
-   border-radius: 0 8px 8px 0;
+  position: relative;
+  border: 2px solid var(--red);
+  border-radius: 0 8px 8px 0;
 }
 
 .bar-gop {
-   position: absolute;
-   top: 0;
-   right: 0;
-   height: 100%;
-   width: 4px;
-   background-color: var(--red);
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 4px;
+  background-color: var(--red);
 }
 
 .flag {
-   text-align: center;
-   font-weight: 700;
+  text-align: center;
+  font-weight: 700;
+  font-size: 50px;
 }
-
 
 /* Candidate Info */
 
 .tables-wrapper {
-   display: -ms-grid;
-   display: grid;
-   -ms-grid-columns: 1fr;
-   grid-template-columns: 1fr;
-   grid-gap: 26px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  grid-gap: 26px;
 }
 
 @media screen and (min-width: 600px) {
-   .tables-wrapper {
-      -ms-grid-columns: 1fr 16px 1fr;
-      grid-template-columns: 1fr 1fr;
-      grid-gap: 16px;
-   }
+  .tables-wrapper {
+    -ms-grid-columns: 1fr 16px 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 16px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
-   .tables-wrapper {
-      -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-      grid-gap: 16px;
-   }
+  .tables-wrapper {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+  }
 }
 
 .table-wrapper {
-   padding: 1em;
-   border-radius: 8px;
+  padding: 2em;
+  border-radius: 8px;
 }
 
 .table-wrapper .candidate {
-   display: -webkit-box;
-   display: -ms-flexbox; 
-   display: flex;
-   -webkit-box-align: center;
-       -ms-flex-align: center;
-           align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .table-wrapper .votes {
-   width: 50%;
-   -webkit-box-flex: 0;
-       -ms-flex: 0 0 auto;
-           flex: 0 0 auto;
+  width: 50%;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .table-wrapper .elect {
-   width: calc(50% - 32px);
+  width: calc(50% - 32px);
 }
 
 .table-wrapper .candidate h2:last-child {
-   text-align: right;
-   margin-left: auto;
+  text-align: right;
+  margin-left: auto;
 }
 
 .elect {
-   display: -webkit-box;
-   display: -ms-flexbox; 
-   display: flex;
-   -webkit-box-align: center;
-       -ms-flex-align: center;
-           align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 35px;
 }
 
 .show-table-btn,
@@ -298,33 +305,33 @@ h3 {
 .open-instructions-btn,
 .close-instructions-btn,
 .close-winner-btn {
-   position: relative;
-   width: 32px;
-   height: 32px;
-   margin-right: 8px;
-   background: none;
-   border: 2px solid var(--purple);
-   border-radius: 50%;
-   -webkit-box-flex: 0;
-       -ms-flex: 0 0 auto;
-           flex: 0 0 auto;
-   text-align: center;
-   display: -webkit-box;
-   display: -ms-flexbox; 
-   display: flex;
-   -webkit-box-align: center;
-       -ms-flex-align: center;
-           align-items: center;
-   -webkit-box-pack: center;
-       -ms-flex-pack: center;
-           justify-content: center;
+  position: relative;
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+  background: none;
+  border: 2px solid var(--purple);
+  border-radius: 50%;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .open-instructions-btn {
-   position: absolute;
-   top: 1rem;
-   right: 1rem;
-   display:none;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: none;
 }
 
 .show-table-btn:hover,
@@ -337,248 +344,263 @@ h3 {
 .open-instructions-btn:focus,
 .close-winner-btn:hover,
 .close-winner-btn:focus {
-   background: var(--purple);
-   color: #fff;
+  background: var(--purple);
+  color: #fff;
 }
 
-
 .close-state-btn {
-   margin-right: 0;
+  margin-right: 0;
 }
 
 .show-table-btn::after {
-   content: "\002B";
-   position: absolute;
-   top: 1px;
-   font-size: 1.2rem;
-   left: 50%;
-   margin-left: -5.5px;
+  content: "\002B";
+  position: absolute;
+  top: 1px;
+  font-size: 1.2rem;
+  left: 50%;
+  margin-left: -5.5px;
 }
 
 .show-table-btn[aria-expanded="true"]::after {
-   content: "\2212";
+  content: "\2212";
 }
 
 .table-wrapper-gop {
-   border: 3px solid var(--red);
+  border: 3px solid var(--red);
 }
 
 .table-wrapper-dem {
-   border: 3px solid var(--blue);
+  border: 3px solid var(--blue);
 }
 
 .table {
-   overflow: hidden;
-   display: flex;
-   flex-direction: column;
-   gap: 2px;
-   font-weight: 500;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-weight: 500;
 }
 
 .table[aria-expanded="true"] {
-   height: auto;
+  height: auto;
 }
 
 .table[aria-expanded="true"]:has(.table-row) {
-   margin-top: 8px;
+  margin-top: 8px;
 }
 
 .table[aria-expanded="false"] {
-   height: 0;
+  height: 0;
 }
 
 .map-totals {
-   width: 100%;
+  width: 100%;
 }
 
 .map {
-   position: relative;
+  position: relative;
 }
 
 .candidates {
-   margin-top: 8px;
+  margin-top: 8px;
 }
 
 @media screen and (min-width: 1200px) {
-   .map-totals {
-      display: -webkit-box;
-      display: -ms-flexbox; 
-      display: flex;
-      -webkit-box-align: start;
-          -ms-flex-align: start;
-              align-items: flex-start;
-   }
-   .map {
-      width: 75%;
-   }
-   .candidates {
-      width: 25%;
-      margin-top: 0;
-   }
+  .map-totals {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+  .map {
+    width: 75%;
+  }
+  .candidates {
+    width: 25%;
+    margin-top: 0;
+  }
 }
 
 .table-row {
-   display: -webkit-box;
-   display: -ms-flexbox; 
-   display: flex;
-   -webkit-box-pack: justify;
-       -ms-flex-pack: justify;
-           justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
-
 
 /* Map and state colors */
 
 .map svg {
-   width: 100%;
+  width: 80%;
 }
 
 .map .state:hover path,
 .map .state:focus path {
-   fill: var(--pink);
+  fill: var(--pink);
 }
 
 .state[data-candidate=""] path {
-   fill: var(--purple);
+  fill: var(--purple);
 }
 
 .map .state[data-candidate="gop"] path {
-   fill: var(--red);
+  fill: var(--red);
 }
 
 .map .state[data-candidate="dem"] path {
-   fill: var(--blue);
+  fill: var(--blue);
 }
 
 .state[data-state="Nebraska"] path,
 .state[data-state="Maine"] path {
-   fill: var(--exception);
+  fill: var(--exception);
 }
 
 /* Washington DC square */
 #doc {
-   position: absolute;
-   bottom: 26%;
-   right: 0;
+  position: absolute;
+  bottom: 26%;
+  right: 0;
 }
 
 @media only screen and (min-width: 600px) {
-   #doc {
-      right: 2em;
-   }
+  #doc {
+    right: 2em;
+  }
 }
 
 .square-state {
-   background-color: var(--purple);
-   border: 0;
-   padding: .5em 1em;
-   color: #fff;
-   font-size: .9rem;
-   border-radius: 8px;
+  background-color: var(--purple);
+  border: 0;
+  padding: 0.5em 1em;
+  color: #fff;
+  font-size: 0.9rem;
+  border-radius: 8px;
 }
 
 .square-state:hover,
 .square-state:focus {
-   cursor: pointer;
-   background-color: var(--pink);
-   color: var(--text);
+  cursor: pointer;
+  background-color: var(--pink);
+  color: var(--text);
 }
 
 .square-state[data-candidate="gop"] {
-   background-color: var(--red);
-   color: #fff;
+  background-color: var(--red);
+  color: #fff;
 }
 
 .square-state[data-candidate="dem"] {
-   background-color: var(--blue);
-   color: #fff;
+  background-color: var(--blue);
+  color: #fff;
 }
 
 .exception-buttons {
-   display: -ms-grid;
-   display: grid;
-   -ms-grid-columns: 1fr 0.5em 1fr;
-   grid-template-columns: 1fr 1fr;
-   grid-gap: 0.5em;
-   margin-bottom: 8px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 0.5em 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0.5em;
+  margin-bottom: 8px;
 }
 
-
 .input-group {
-   display: -ms-grid;
-   display: grid;
-   -ms-grid-columns: 1fr 1fr;
-   grid-template-columns: 1fr 1fr;
-   margin-bottom: 8px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 8px;
 }
 
 button.update {
-   background-color: var(--purple);
-   border: 0;
-   color: #fff;
-   padding: 8px 16px;
-   display: block;
-   width: 100%;
+  background-color: var(--purple);
+  border: 0;
+  color: #fff;
+  padding: 8px 16px;
+  display: block;
+  width: 100%;
 }
 
 button.update:hover,
 button.update:focus {
-   background-color: var(--exception);
+  background-color: var(--exception);
 }
 
 .error {
-   color: var(--error);
-   font-weight: 700;
-   margin-bottom: 8px;
+  color: var(--error);
+  font-weight: 700;
+  margin-bottom: 8px;
 }
 
 footer {
-   margin-top: 24px;
-   text-align: center;
+  margin-top: 24px;
+  text-align: center;
 }
 
 /* Local storage buttons */
 .btn-local-wrapper {
-   margin-top: 1rem;
-   display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   gap: 8px;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
 }
 
 .btn-local-wrapper button,
 .btn-dialog {
-   padding: 0.375rem;
-   text-transform: uppercase;
-   font-size: 0.875rem;
-   font-weight: 600;
-   letter-spacing: 0.4px;
-   background-color: var(--btn);
-   color: white;
-   border: 2px solid var(--btn);
-   border-radius: 0.5rem;
+  padding: 20px;
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  background-color: var(--btn);
+  color: white;
+  border: 2px solid var(--btn);
+  border-radius: 0.5rem;
 }
 
 .btn-dialog.btn-secondary {
-   background-color: var(--btn-secondary);
-   color: var(--btn);
+  background-color: var(--btn-secondary);
+  color: var(--btn);
 }
 
 .btn-local-wrapper button:hover,
 .btn-dialog:hover {
-   background-color: var(--white);
-   color: var(--btn);
+  background-color: var(--white);
+  color: var(--btn);
 }
 
 .btn-dialog.btn-secondary:hover {
-   background-color: var(--btn-secondary-hover);
-   color: white;
+  background-color: var(--btn-secondary-hover);
+  color: white;
 }
 
 .save-time {
-   font-size: 0.875rem;
-   font-style: italic;
-   font-weight: 500;
+  font-size: 0.875rem;
+  font-style: italic;
+  font-weight: 500;
 }
-.title-map{
-   color: #173C80;
+.title-map {
+  color: #173c80;
+  font-size: 100px;
+  text-align: left;
+  padding: unset;
+}
+
+.hurdle-dem-name {
+  color: var(--blue);
+}
+.hurdle-gop-name {
+  color: var(--red);
+}
+.container__title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.elections_2024 {
+  width: 400px;
 }

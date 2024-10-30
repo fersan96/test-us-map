@@ -9,29 +9,17 @@
       content="Click each state to assign totals to candidates and watch their progress">
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="stylesheet" href="styles.css">
-   <link rel="icon"
-      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦅</text></svg>">
+   
 </head>
 
 <body class="theme-bright">
    <!-- <div class="instructions-overlay open"></div> -->
-   <h1 class="title-map">Elecciones presidenciales de EE.UU. 2024<span></span></h1>
-   <button class="open-instructions-btn" aria-label="Open Instructions" title="Instructions"><span>?</span></button>
-   <div class="hurdle-wrapper">
-      <div class="hurdle-names">
-         <span class="hurdle-dem-name"></span>
-         <span class="hurdle-gop-name"></span>
-      </div>
-      <div class="hurdle">
-         <div class="hurdle-dem">
-            <div class="bar-dem"></div>
-         </div>
-         <div class="hurdle-gop">
-            <div class="bar-gop"></div>
-         </div>
-      </div>
-      <div class="flag"><br />270 a ganar</div>
-   </div> <!-- end hurdle wrapper -->
+    <div class="container__title">
+      <img src="./assets/logo24.png" alt="2024" class="elections_2024">
+       <h1 class="title-map">Elecciones presidenciales de EE.UU. 2024<span></span></h1>
+    </div>
+
+  
    <dialog class="instructions-dialog">
       <!-- <button class="close-instructions-btn" aria-label="Close Instructions"><span>x</span></button> -->
       <div class="instructions-text">
@@ -51,7 +39,7 @@
    <!-- end instructions -->
    <dialog class="winner-dialog">
       <!-- <button class="close-winner-btn" aria-label="Close Winner"><span>x</span></button> -->
-      <h2>President-Elect</h2>
+      <h2>Presidente electo</h2>
       <h3 class="winner-president"></h3>
       <form method="dialog">
          <button class="btn-dialog" autofocus>OK</button>
@@ -462,7 +450,7 @@
          </div>
       </div>
       <div class="candidates">
-         <div class="current-state">Click on a State</div>
+         <div class="current-state">Selecciona algun estado</div>
          <div class="exceptions">
             <div class="maine exception-state">
                <h3>Maine <button class="close-state-btn" aria-label="Close Maine Inputs"><span>X</span></button></h3>
@@ -519,7 +507,21 @@
       </div> <!-- end candidates -->
 
    </div> <!-- end map totals -->
-  
+   <div class="hurdle-wrapper">
+      <div class="hurdle-names">
+         <span class="hurdle-dem-name"></span>
+         <span class="hurdle-gop-name"></span>
+      </div>
+      <div class="hurdle">
+         <div class="hurdle-dem">
+            <div class="bar-dem"></div>
+         </div>
+         <div class="hurdle-gop">
+            <div class="bar-gop"></div>
+         </div>
+      </div>
+      <div class="flag"><br />270 para ganar</div>
+   </div> <!-- end hurdle wrapper -->
    <script src="scripts.js" async defer></script>
 </body>
 

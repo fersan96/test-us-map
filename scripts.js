@@ -101,8 +101,8 @@ let gopVotes = [];
 let demVotes = [];
 
 /* Input candidate names */
-const gopCandidate = 'Trump';
-const demCandidate = 'Harris';
+const gopCandidate = 'Republicano';
+const demCandidate = 'Demócrata';
 
 /* Change Table Headings and Progress Bar Hurdle */
 electGop.innerText = gopCandidate;
@@ -245,11 +245,11 @@ function updateVoteTotals() {
    // display winner dialog once either candidate reaches 270
    if (gopTotal >= 270 || demTotal >= 270) {
       if (gopTotal >= 270) {
-         presidentElect.textContent = `${gopCandidate} - ${gopTotal} Votes`;
-         h1.textContent = ` - President-Elect ${gopCandidate}`;
+         presidentElect.textContent = `${gopCandidate} - ${gopTotal} Votos`;
+         h1.textContent = ` - Presidente Electo ${gopCandidate}`;
       } else {
-         presidentElect.textContent = `${demCandidate} 🎆 - ${demTotal} Votes`;
-         h1.textContent = ` - President-Elect ${demCandidate}`;
+         presidentElect.textContent = `${demCandidate} 🎆 - ${demTotal} Votos`;
+         h1.textContent = ` - President Electo ${demCandidate}`;
       }
       if (winnerAnnounced === false ) {
          winner.showModal();
