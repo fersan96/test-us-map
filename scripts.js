@@ -86,6 +86,9 @@ const electGop = document.querySelector('.elect-gop');
 const electDem = document.querySelector('.elect-dem');
 const hurdleDemName = document.querySelector('.hurdle-dem-name');
 const hurdleGopName = document.querySelector('.hurdle-gop-name');
+const totalDemocrata = document.querySelector('.total__democrata');
+const totalRepublicano = document.querySelector('.total__republicano');
+
 
 /* Winner */
 const winner = document.querySelector('.winner-dialog');
@@ -101,8 +104,8 @@ let gopVotes = [];
 let demVotes = [];
 
 /* Input candidate names */
-const gopCandidate = 'Republicano';
-const demCandidate = 'Demócrata';
+const gopCandidate = 'Donald Trump';
+const demCandidate = 'Kamala Harris';
 
 /* Change Table Headings and Progress Bar Hurdle */
 electGop.innerText = gopCandidate;
@@ -217,6 +220,8 @@ function updateVoteTotals() {
    // Update the HTML with the states and percentage to 270
    // The percentage bar needs to take into account the border and the percentage change once they pass 270
    gop.textContent = `${gopTotal} Votos`;
+   console.log(gopTotal,'total');
+   totalRepublicano.textContent = gopTotal || '';
    if (gopTotal <= 270) {
       gopPercentage.style.width = `calc(${gopTotal / 270 * 100}% + 4px)`;
    } else {
@@ -234,7 +239,9 @@ function updateVoteTotals() {
 
    // Update the HTML with the states and percentage to 270
    // The percentage bar needs to take into account the border and the percentage change once they pass 270
+
    dem.textContent = `${demTotal} Votos`;
+   totalDemocrata.textContent = demTotal || '';
    if (demTotal <= 270) {
       demPercentage.style.width = `calc(${demTotal / 270 * 100}% + 4px)`;
    } else {

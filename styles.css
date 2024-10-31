@@ -33,7 +33,6 @@ body {
   /* margin: 16px; */
   font-weight: 400;
   background-color: #dde5fa;
-
 }
 
 h1 {
@@ -233,7 +232,7 @@ h3 {
 .flag {
   text-align: center;
   font-weight: 700;
-  font-size: var(--text-size);
+  font-size: 35px;
 }
 
 /* Candidate Info */
@@ -400,12 +399,11 @@ h3 {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 
 .map {
   position: relative;
-
 }
 
 .candidates {
@@ -427,6 +425,7 @@ h3 {
   .candidates {
     width: 25%;
     margin-top: 0;
+    display:none;
   }
 }
 
@@ -615,3 +614,20 @@ footer {
 /* .dem-votes,.gop-votes{
    font-size: 30px;
 } */
+.total__democrata,
+.total__republicano {
+  color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+  position: absolute;
+  z-index: 10;
+  top: calc(50% - 14px);
+}
+.total__democrata {
+  
+  left: 10px;
+}
+.total__republicano{
+  right: 10px;
+
+}
