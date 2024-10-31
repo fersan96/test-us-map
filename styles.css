@@ -8,6 +8,7 @@
   --white: #f7f7f9;
   --error: #d67ab1;
   --text: #351431;
+  --text-size: 25px;
 }
 
 .theme-bright {
@@ -134,7 +135,7 @@ dialog form {
 .current-state {
   font-style: italic;
   margin-bottom: 1em;
-  font-size: 50px;
+  font-size: var(--text-size);
 }
 
 /* Maine and Nebraska input boxes */
@@ -191,7 +192,7 @@ h3 {
   display: flex;
   justify-content: space-between;
   text-transform: uppercase;
-  font-size: 50px;
+  font-size: var(--text-size);
   font-weight: 700;
   max-width: 1600px;
   margin: 0 auto;
@@ -231,7 +232,7 @@ h3 {
 .flag {
   text-align: center;
   font-weight: 700;
-  font-size: 50px;
+  font-size: var(--text-size);
 }
 
 /* Candidate Info */
@@ -604,7 +605,7 @@ footer {
   justify-content: flex-start;
 }
 .elections_2024 {
-  width: 400px;
+  width: 300px;
 }
 .dem-votes,.gop-votes{
    font-size: 30px;
