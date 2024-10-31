@@ -595,6 +595,7 @@ footer {
   font-size: 50px;
   text-align: left;
   padding: unset;
+  font-weight: bold;
 }
 
 .hurdle-dem-name {
