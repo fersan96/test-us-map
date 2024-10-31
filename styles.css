@@ -33,6 +33,7 @@ body {
   /* margin: 16px; */
   font-weight: 400;
   background-color: #dde5fa;
+
 }
 
 h1 {
@@ -399,6 +400,7 @@ h3 {
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-bottom: 80px;
 }
 
 .map {
@@ -591,7 +593,7 @@ footer {
 }
 .title-map {
   color: #173c80;
-  /* font-size: 70px; */
+  font-size: 50px;
   text-align: left;
   padding: unset;
 }
